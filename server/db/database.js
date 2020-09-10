@@ -10,9 +10,20 @@ const pkg = require("../../package.json");
 // const dbName = process.env.NODE_ENV === "test" ? `${pkg.name}-test` : pkg.name;
 console.log(chalk.yellow(`Opening database connection to journal`));
 
-const db = new Sequelize(`postgres://localhost:5432/portfolio`, {
-  logging: false,
-  native: false,
-});
+// const db = new Sequelize(`postgres://localhost:5432/portfolio`, {
+//   logging: false,
+//   native: false,
+// });
 
+// module.exports = db;
+
+const databaseName = pkg.name;
+//  + (process.env.NODE_ENV === 'test' ? '-test' : '')
+
+const db = new Sequelize(
+  process.env.DATABASE_URL || `postgres://localhost:5432/${databaseName}`,
+  {
+    logging: false,
+  }
+);
 module.exports = db;
