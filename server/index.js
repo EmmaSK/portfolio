@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //routes
-// app.use("/api", require("./api"));
+app.use("/api", require("./api"));
 
 //static mware
 app.use(express.static(path.join(__dirname, "..", "public")));
