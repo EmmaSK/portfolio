@@ -16,10 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", require("./api"));
 
 //static mware
-app.use(express.static(path.join(__dirname, "..", "/")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "/index.html"));
+  res.sendFile(path.join(__dirname, "..", "public/index.html"));
 });
 
 //error handling mware

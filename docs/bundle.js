@@ -691,7 +691,11 @@ var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-r
 
 var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
+<<<<<<< HEAD
 __webpack_require__(/*! ../style.scss */ "./style.scss");
+=======
+__webpack_require__(/*! ../public/style.scss */ "./public/style.scss");
+>>>>>>> parent of ba57a243... fix: public to docs folder
 
 var _store = __webpack_require__(/*! ./store */ "./app/store.js");
 
@@ -14079,10 +14083,17 @@ module.exports = __webpack_require__(/*! ./modules/_core */ "./node_modules/core
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss ***!
   \*************************************************************************************************/
+=======
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/style.scss":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/style.scss ***!
+  \********************************************************************************************************/
+>>>>>>> parent of ba57a243... fix: public to docs folder
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -54032,15 +54043,26 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./style.scss":
 /*!********************!*\
   !*** ./style.scss ***!
   \********************/
+=======
+/***/ "./public/style.scss":
+/*!***************************!*\
+  !*** ./public/style.scss ***!
+  \***************************/
+>>>>>>> parent of ba57a243... fix: public to docs folder
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
+<<<<<<< HEAD
 var content = __webpack_require__(/*! !./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss");
+=======
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./public/style.scss");
+>>>>>>> parent of ba57a243... fix: public to docs folder
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -54054,7 +54076,11 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
+<<<<<<< HEAD
 var update = __webpack_require__(/*! ./node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+=======
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+>>>>>>> parent of ba57a243... fix: public to docs folder
 
 if(content.locals) module.exports = content.locals;
 
