@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: __dirname,
 
-    filename: "./docs/bundle.js",
+    filename: "./bundle.js",
   },
   mode: "development",
   context: __dirname,

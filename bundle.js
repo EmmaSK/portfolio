@@ -691,7 +691,7 @@ var _reactRedux = __webpack_require__(/*! react-redux */ "./node_modules/react-r
 
 var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
-__webpack_require__(/*! ../style.scss */ "./style.scss");
+__webpack_require__(/*! ../docs/style.scss */ "./docs/style.scss");
 
 var _store = __webpack_require__(/*! ./store */ "./app/store.js");
 
@@ -1120,6 +1120,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_redux3.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, (0, _reduxLogger.createLogger)()));
 
 exports.default = store;
+
+/***/ }),
+
+/***/ "./docs/style.scss":
+/*!*************************!*\
+  !*** ./docs/style.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./docs/style.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -14079,15 +14109,15 @@ module.exports = __webpack_require__(/*! ./modules/_core */ "./node_modules/core
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./docs/style.scss":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./docs/style.scss ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "body {\n  background-color: #2aad63;\n  height: 100%;\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  font-family: \"Rubik\", sans-serif;\n}\n\n#root {\n  height: 100%;\n  width: 100%;\n}\n\n#app {\n  height: 100%;\n  width: 100%;\n}\n\n#main {\n  background-color: #0073fe;\n  height: 70vh;\n  width: 100%;\n}\n\nnav {\n  background-color: #0073fe;\n  max-width: 100%;\n  height: 100px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 0 1em;\n}\nnav div {\n  width: fit-content;\n  display: flex;\n  align-items: center;\n  justify-content: space-evenly;\n}\nnav a {\n  padding: 0 20px;\n  font-size: 24pt;\n  color: #f1f159;\n}\nnav a:hover {\n  color: #35fa80;\n}\nnav .navDropdown {\n  position: relative;\n  padding: 0 20px;\n  display: flex;\n  flex-direction: column;\n}\nnav .navDropdown .navDropButton {\n  font-size: 24pt;\n  color: #f1f159;\n}\nnav .navDropdown .navDropButton:hover {\n  color: #0c0475;\n}\nnav .navDropdown .navDropContent {\n  display: none;\n  z-index: 1;\n  position: absolute;\n  top: 40px;\n  width: 70%;\n}\nnav .navDropdown .navDropContent a {\n  display: block;\n  padding: 5px 0;\n  font-size: 16pt;\n}\nnav .navDropdown:hover .navDropContent {\n  z-index: 1;\n  display: flex;\n  flex-direction: column;\n  background: #0c0475;\n  border-radius: 10px;\n  padding: 3px;\n  color: black;\n}\n\nfooter {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: space-between;\n  height: 12vh;\n  max-height: 200px;\n  padding: 1em 2em;\n}\nfooter div {\n  max-width: 30vw;\n}\nfooter a {\n  display: flex;\n  align-items: center;\n}\n\na {\n  text-decoration: none;\n}\n\n.all {\n  font-size: 20pt;\n  color: white;\n  text-shadow: 2px 2px 5px white;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 100px 0 150px;\n}\n.all a {\n  color: white;\n}\n\n.single {\n  background-color: #2aad63;\n  font-size: 20pt;\n  color: #261f07;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  max-width: 60vw;\n  text-align: left;\n  margin-left: 10vw;\n  padding-top: 60px;\n}\n\n.single img {\n  max-width: 200px;\n}\n\n#footer {\n  background-color: #2aad63;\n  width: 100vw;\n  display: block;\n  justify-content: flex-end;\n}", ""]);
@@ -54029,36 +54059,6 @@ module.exports = function(originalModule) {
 	return module;
 };
 
-
-/***/ }),
-
-/***/ "./style.scss":
-/*!********************!*\
-  !*** ./style.scss ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ./node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
 
 /***/ }),
 
