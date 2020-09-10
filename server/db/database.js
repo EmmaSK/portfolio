@@ -10,7 +10,7 @@ const pkg = require("../../package.json");
 // const dbName = process.env.NODE_ENV === "test" ? `${pkg.name}-test` : pkg.name;
 console.log(chalk.yellow(`Opening database connection to journal`));
 
-const db = new Sequelize(`postgres://localhost:5432/journal`, {
+const db = new Sequelize(`postgres://localhost:5432/portfolio`, {
   logging: false,
   native: false,
 });
