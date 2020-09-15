@@ -15,7 +15,8 @@ export default function Nav() {
             <Link to="/design">UI Design</Link>
           </div>
         </div>
-        <Link to={"/art"}>Offline</Link>
+        <Link to={"/offline"}>Offline</Link>
+        <Link to="/entries">Blog</Link>
         <Link to={"/about"}>About</Link>
       </div>
     </nav>

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server",
-    "start-dev": "webpack -w & nodemon server.js",
+    "start-dev": "webpack -w & nodemon server",
     "seed": "node seed.js"
   },
   "repository": {
@@ -71,7 +71,7 @@
     "eslint": "^4.19.1",
     "eslint-config-fullstack": "^5.0.0",
     "eslint-plugin-react": "^7.8.2",
-    "file-loader": "^6.0.0",
+    "file-loader": "^6.1.0",
     "jsdom": "^11.12.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
@@ -82,6 +82,7 @@
     "sinon-chai": "^3.5.0",
     "style-loader": "^0.21.0",
     "supertest": "^3.1.0",
+    "url-loader": "^4.1.0",
     "volleyball": "^1.5.1",
     "wait-for-expect": "^3.0.2",
     "webpack": "^4.44.0",

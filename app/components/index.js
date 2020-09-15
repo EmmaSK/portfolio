@@ -5,3 +5,7 @@ export { default as SingleEntry } from "./SingleEntry";
 export { default as About } from "./About";
 export { default as Routes } from "./Routes";
 export { default as Home } from "./Home";
+export { default as Team } from "./Team";
+export { default as Solo } from "./Solo";
+export { default as Offline } from "./Offline";
+export { default as Design } from "./Design";

@@ -1,9 +1,18 @@
+$blue: #0a49db;
+$darkblue: #0c0475;
+$lightblue: rgba(79, 174, 248, 1);
+$green: #3ab94f;
+$yellow: rgb(241, 241, 89);
+
+html {
+  width: fit-content;
+}
 body {
-  background-color: #2aad63;
+  background-color: $green;
   height: 100%;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 100vw;
   font-family: "Rubik", sans-serif;
 }
 
@@ -18,13 +27,112 @@ body {
 }
 
 #main {
-  background-color: #0073fe;
+  position: relative;
+  z-index: 0;
+  background-color: $blue;
   height: 70vh;
   width: 100%;
 }
 
+.main {
+  text-align: center;
+  .title {
+    padding-top: 2em;
+  }
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+  p {
+    margin: auto;
+    padding: 2em 0;
+    max-width: 80vw;
+    font-size: 18pt;
+    color: rgb(255, 255, 255);
+    text-align: left;
+  }
+  a {
+    color: $yellow;
+    &:hover {
+      color: $lightblue;
+    }
+  }
+  img {
+    max-width: 300px;
+    margin: 0 auto -15px;
+  }
+}
+
+#about {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 70vh;
+  #emma {
+    margin-top: auto;
+    width: 280px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    // max-height: 60vh;
+  }
+  .drop {
+    height: 100%;
+    width: fit-content;
+    svg {
+      width: fit-content;
+    }
+  }
+  #aboutText {
+    align-self: center;
+    max-width: 28vw;
+    min-width: 300px;
+    margin-bottom: 1em;
+    background: white;
+    border-radius: 20px;
+    height: fit-content;
+    padding: 1em 1.5em;
+    // margin-top: 2em;
+    #resume {
+      font-size: 18pt;
+    }
+    a {
+      color: $blue;
+      &:hover {
+        color: $lightblue;
+      }
+    }
+  }
+  #cloud {
+    height: 70vh;
+  }
+  #hello {
+    // background-image: url("../app/assets/cloud.png");
+    // background: url("https://pngimage.net/wp-content/uploads/2018/06/white-cloud-vector-png-1.png")
+    //   no-repeat;
+    position: relative;
+    height: fit-content;
+
+    img {
+      width: 40vw;
+      max-width: 480px;
+    }
+    p {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20pt;
+      color: $blue;
+    }
+  }
+}
+
 nav {
-  background-color: #0073fe;
+  background-color: $blue;
   max-width: 100%;
   height: 100px;
   display: flex;
@@ -40,9 +148,9 @@ nav {
   a {
     padding: 0 20px;
     font-size: 24pt;
-    color: rgb(241, 241, 89);
+    color: $yellow;
     &:hover {
-      color: #35fa80;
+      color: $green;
     }
   }
   .navDropdown {
@@ -54,16 +162,16 @@ nav {
 
     .navDropButton {
       font-size: 24pt;
-      color: rgb(241, 241, 89);
+      color: $yellow;
       &:hover {
-        color: #0c0475;
+        color: $darkblue;
       }
     }
     .navDropContent {
       display: none;
       z-index: 1;
       position: absolute;
-      top: 40px;
+      top: 37px;
       width: 70%;
       a {
         display: block;
@@ -76,7 +184,7 @@ nav {
         z-index: 1;
         display: flex;
         flex-direction: column;
-        background: #0c0475;
+        background: $darkblue;
         // border: 2px solid #0c0475;
         border-radius: 10px;
         padding: 3px;
@@ -87,26 +195,101 @@ nav {
 }
 
 footer {
+  position: relative;
+  background: $green;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
+  z-index: 3;
   justify-content: space-between;
   height: 12vh;
   max-height: 200px;
-  padding: 1em 2em;
-  div {
-    max-width: 30vw;
-  }
+  padding: 1.25em 2em;
+
   a {
     display: flex;
+    justify-content: space-evenly;
 
+    color: rgb(6, 75, 11);
+    font-size: 16pt;
     align-items: center;
+    &:hover {
+      color: $blue;
+    }
+  }
+  p {
+    color: darkgreen;
   }
 }
 
 a {
   text-decoration: none;
+}
+
+.title {
+  // background: rgb(10, 73, 219);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(10, 73, 219, 1) 25%,
+  //   rgba(79, 174, 248, 1) 100%
+  // );
+  font-size: 26pt;
+  color: white;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0 0;
+  margin: auto;
+  max-width: 80vw;
+}
+
+.teamSolo {
+  height: 70vh;
+  width: 100%;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: inherit;
+  padding-top: 1em;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  max-width: 30vw;
+  min-width: 200px;
+  align-items: center;
+  img {
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+  }
+  #rat {
+    padding: 2em 0 1em;
+    max-width: 275px;
+  }
+
+  #hr {
+    padding: 1em 0;
+  }
+  a {
+    font-size: 20pt;
+    padding-bottom: 0.5em;
+    color: $yellow;
+    &:hover {
+      color: $lightblue;
+    }
+  }
+  p {
+    font-size: 14pt;
+    color: rgb(243, 238, 212);
+    margin: 0;
+  }
 }
 
 .all {
@@ -123,7 +306,7 @@ a {
 }
 
 .single {
-  background-color: #2aad63;
+  background-color: $green;
   font-size: 20pt;
   color: rgb(38, 31, 7);
 
@@ -145,11 +328,76 @@ a {
 .entryContent {
 }
 
-#footer {
-  background-color: #2aad63;
-  width: 100vw;
-
-  display: block;
-
-  justify-content: flex-end;
+@media (max-width: 900px) {
+  nav {
+    a {
+      font-size: 16pt;
+    }
+    .navDropdown {
+      .navDropButton {
+        font-size: 16pt;
+      }
+      .navDropContent {
+        top: 26px;
+        a {
+          font-size: 14pt;
+        }
+      }
+    }
+  }
+  #about {
+    #hello {
+      p {
+        font-size: 14pt;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  body {
+    width: fit-content;
+  }
+  #root {
+    width: fit-content;
+  }
+  nav {
+    width: 100%;
+    padding: 0;
+    .navDropdown {
+      .navDropContent {
+        a {
+          text-align: center;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  #home {
+    width: 100%;
+    height: 90vh;
+  }
+  #main {
+    width: 100%;
+    height: 90vh;
+  }
+  #about {
+    overflow: scroll;
+    width: 100%;
+    height: 90vh;
+    #cloud {
+      width: 90vw;
+      height: 75vh;
+    }
+    #hello {
+      img {
+        width: 80vw;
+      }
+    }
+    #aboutText {
+      margin-top: 0;
+    }
+  }
+  .title {
+    font-size: 20pt;
+  }
 }
