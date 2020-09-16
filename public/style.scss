@@ -38,7 +38,7 @@ body {
 .main {
   text-align: center;
   .title {
-    padding-top: 2em;
+    padding-top: 1em;
   }
 }
 #home {
@@ -62,7 +62,7 @@ body {
   }
   img {
     max-width: 300px;
-    margin: 0 auto -15px;
+    margin: 0 auto;
   }
 }
 
@@ -211,13 +211,23 @@ footer {
   position: relative;
   background: $green;
   display: flex;
-
+  flex-wrap: wrap;
   align-items: center;
   z-index: 3;
   justify-content: space-between;
   height: 12vh;
   max-height: 200px;
   padding: 1.25em 2em;
+  div {
+    max-width: 60vw;
+    min-width: 100px;
+  }
+
+  p {
+    margin: 0.5em 0;
+    color: darkgreen;
+    font-size: 10pt;
+  }
 
   a {
     display: flex;
@@ -229,9 +239,6 @@ footer {
     &:hover {
       color: $blue;
     }
-  }
-  p {
-    color: darkgreen;
   }
 }
 
@@ -246,6 +253,7 @@ a {
   //   rgba(10, 73, 219, 1) 25%,
   //   rgba(79, 174, 248, 1) 100%
   // );
+  text-align: left;
   font-size: 26pt;
   color: white;
   text-shadow: 2px 2px 5px rgb(255, 255, 255);
@@ -508,10 +516,17 @@ a {
       padding: 0.5em;
     }
   }
+  // .main {
+  //   .title {
+  //     padding: 0 0 0.5em;
+  //     font-size: 20pt;
+  //   }
+  // }
   .main {
+    text-align: center;
     .title {
-      padding: 0 0 0.5em;
       font-size: 20pt;
+      padding: 1em 0;
     }
   }
 }
