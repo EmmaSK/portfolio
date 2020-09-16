@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        <a href="https://github.com/2006-GHP-NY-Raikou/rat_shopper">
+        <a href="https://github.com/EmmaSK/portfolio">
           <GoMarkGithub color="##e36397" size={32} />
           <span>GitHub</span>
         </a>

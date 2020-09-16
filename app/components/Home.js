@@ -13,7 +13,10 @@ export default function Home() {
         <br />
         <br />
         You can check out my resume{" "}
-        <a href="https://docs.google.com/document/d/1XyDnlVmuPcuJAW7WzRuodM9z4Hc9aKcheYQQj7tv6Go/edit">
+        <a
+          href="https://docs.google.com/document/d/1XyDnlVmuPcuJAW7WzRuodM9z4Hc9aKcheYQQj7tv6Go/edit"
+          target="_blank"
+        >
           here.
         </a>
       </p>
