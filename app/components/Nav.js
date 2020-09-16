@@ -8,11 +8,11 @@ export default function Nav() {
       </div>
       <div>
         <div className="navDropdown">
-          <div className="navDropButton">Web Dev</div>
+          <div className="navDropButton">Work</div>
           <div className="navDropContent">
             <Link to="/team">Team</Link>
             <Link to="/solo">Solo</Link>
-            <Link to="/design">UI Design</Link>
+            <Link to="/design">Design</Link>
           </div>
         </div>
         <Link to={"/offline"}>Offline</Link>
