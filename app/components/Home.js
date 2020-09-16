@@ -8,10 +8,11 @@ export default function Home() {
         Hi, I'm Emma. Welcome to my corner of the world!
       </div>
       <p>
-        This site is growing every day, my <Link to={"/about"}>About Page</Link>{" "}
-        is a good place to start!
-        <br />
-        <br />
+        This site is growing every day – my{" "}
+        <Link to={"/about"}>About Page</Link> is a great place to start!
+      </p>
+      <p>
+        {" "}
         You can check out my resume{" "}
         <a
           href="https://docs.google.com/document/d/1XyDnlVmuPcuJAW7WzRuodM9z4Hc9aKcheYQQj7tv6Go/edit"
