@@ -10,9 +10,9 @@ export default function Home() {
       <div>
         <p>
           This site is still growing, but my{" "}
-          <Link to={"/about"}>About Page</Link> is a great place to start.
+          <Link to={"/about"}>About Page</Link> is a great place to start!
         </p>
-        <p>
+        {/* <p>
           You can check out my resume{" "}
           <a
             href="https://docs.google.com/document/d/1XyDnlVmuPcuJAW7WzRuodM9z4Hc9aKcheYQQj7tv6Go/edit"
@@ -20,10 +20,10 @@ export default function Home() {
           >
             here.
           </a>
-        </p>
+        </p> */}
         <p>
-          I'd love to hear from you! Reach me at{" "}
-          <a href="mailto:emseely@gmail.com">emseely@gmail.com</a>
+          You can reach me at{" "}
+          <a href="mailto:emseely@gmail.com">emseely@gmail.com</a>.
         </p>
       </div>
 
