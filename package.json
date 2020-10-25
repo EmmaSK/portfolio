@@ -33,6 +33,7 @@
     "chalk": "^2.4.2",
     "express": "^4.14.0",
     "express-sslify": "^1.2.0",
+    "local-web-server": "^4.2.1",
     "lodash": "^4.17.19",
     "morgan": "^1.10.0",
     "pg": "^7.18.2",

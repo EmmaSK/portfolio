@@ -4,9 +4,9 @@ const morgan = require("morgan");
 const app = express();
 const { db } = require("./db");
 const bodyParser = require("body-parser");
-const enforce = require("express-sslify");
+// const enforce = require("express-sslify");
 
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+// app.use(enforce.HTTPS({ trustProtoHeader: true }));
 //logging middleware
 app.use(morgan("dev"));
 
