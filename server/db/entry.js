@@ -20,6 +20,7 @@ module.exports = db.define("entry", {
   tags: {
     type: Sequelize.ARRAY(Sequelize.STRING),
     defaultValue: [],
+
     get() {
       const arr = this.getDataValue("tags");
 

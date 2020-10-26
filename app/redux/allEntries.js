@@ -22,7 +22,7 @@ export const fetchEntries = () => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get("/api/entries");
-
+      console.log("FETCHING", data);
       dispatch(getEntries(data));
     } catch (err) {
       console.log(err);
@@ -30,10 +30,20 @@ export const fetchEntries = () => {
   };
 };
 
-const addNewEntry = (entry) => {
+export const addNewEntry = (entry) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post("/api/entries");
+      const date = new Date();
+      const { data } = await axios.post("/api/entries", {
+        title: entry.title,
+        imageUrl:
+          entry.imageUrl ||
+          "https://vignette.wikia.nocookie.net/haikyuu/images/e/e5/Hinata_s1-e1-1.png/revision/latest/top-crop/width/300/height/300?cb=20200508104838",
+        content: entry.content,
+        tags: entry.tags || [],
+        date: date,
+      });
+      console.log("NEW", data);
       dispatch(newEntry(data));
     } catch (err) {
       console.log(err);
@@ -41,7 +51,7 @@ const addNewEntry = (entry) => {
   };
 };
 
-const deleteEntry = (entry) => {
+export const deleteEntry = (entry) => {
   return async (dispatch) => {
     await axios.delete(`/api/entries/${entry.id}`);
     dispatch(removeEntry(entry));
@@ -54,7 +64,7 @@ export default function entriesReducer(state = initialState, action) {
       return { ...state, entries: action.entries };
 
     case NEW_ENTRY:
-      return { ...state, entries: [state.entries, action.entry] };
+      return { ...state, entries: [...state.entries, action.entry] };
 
     case REMOVE_ENTRY:
       return {
