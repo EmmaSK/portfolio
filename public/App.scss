@@ -355,6 +355,11 @@ a {
   max-width: 200px;
 }
 
+#singleEntry {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .entryInfo {
 }
 .entryContent {

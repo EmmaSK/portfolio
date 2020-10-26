@@ -35,7 +35,7 @@ class AllEntries extends React.Component {
 
     return (
       <div className="main">
-        <div className="title">Blog coming soon!</div>
+        {/* <div className="title">Blog coming soon!</div> */}
 
         <div
         // className="all">
