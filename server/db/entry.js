@@ -9,8 +9,7 @@ module.exports = db.define("entry", {
   },
   imageUrl: {
     type: Sequelize.TEXT,
-    defaultValue:
-      "https://vignette.wikia.nocookie.net/haikyuu/images/e/e5/Hinata_s1-e1-1.png/revision/latest/top-crop/width/300/height/300?cb=20200508104838",
+    defaultValue: "",
   },
   content: {
     type: Sequelize.TEXT,

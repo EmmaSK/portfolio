@@ -5,12 +5,21 @@ import { AllEntries } from "./index";
 class SingleEntry extends React.Component {
   constructor() {
     super();
+    this.handleChange = this.handleChange.bind(this);
   }
   componentDidMount() {
     try {
       this.props.loadEntry(this.props.match.params.id);
     } catch (err) {
       console.error(err);
+    }
+  }
+
+  handleChange() {
+    // event.preventDefault();
+    if (this.props.entry.id !== this.props.match.params.id) {
+      this.props.entry = this.props.match.params;
+      this.props.loadEntry(this.props.match.params.id);
     }
   }
   render() {
@@ -23,7 +32,7 @@ class SingleEntry extends React.Component {
     console.log("entry", entry);
     return (
       <div id="singleEntry">
-        <AllEntries />
+        <AllEntries changeEntry={this.handleChange} />
         <div>
           <div>{entry.title}</div>
           {/* <div>by {author}</div> */}

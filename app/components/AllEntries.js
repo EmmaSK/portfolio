@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal";
 // import Modal from "react-modal";
 import Button from "react-bootstrap/Button";
 import NewEntry from "./NewEntry";
+import DeleteEntry from "./DeleteEntry";
 
 class AllEntries extends React.Component {
   constructor() {
@@ -41,12 +42,19 @@ class AllEntries extends React.Component {
         // className="all">
         >
           {entries.map((entry) => (
-            <Link to={`/entries/${entry.id}`} key={entry.id}>
-              <div>
-                {entry.title} by{" "}
-                {entry.author ? entry.author.handle : "Anonymus"}
-              </div>
-            </Link>
+            <div>
+              <Link
+                to={`/entries/${entry.id}`}
+                key={entry.id}
+                onClick={this.props.changeEntry}
+              >
+                <div>
+                  {entry.title} by{" "}
+                  {entry.author ? entry.author.handle : "Anonymus"}
+                </div>
+              </Link>
+              <DeleteEntry entry={entry} />
+            </div>
           ))}
         </div>
 
