@@ -35,7 +35,7 @@ router.post("/", async (req, res, next) => {
       title,
       imageUrl:
         imageUrl ||
-        "https://vignette.wikia.nocookie.net/haikyuu/images/e/e5/Hinata_s1-e1-1.png/revision/latest/top-crop/width/300/height/300?cb=20200508104838",
+        "https://www.freeiconspng.com/thumbs/birds-png/flying-birds-png-stock-1.png",
       content,
       tags: tags || "No tags",
       date: new Date(),

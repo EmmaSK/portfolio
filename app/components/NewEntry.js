@@ -49,36 +49,6 @@ class NewEntry extends React.Component {
             <Modal.Title>New Post</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {/* <for onSubmit={this.handleSubmit}>
-              <Row>
-                <Col>
-                  <Form.Group controlId="title">
-                    <Form.Label>Title</Form.Label>
-                    <Form.Control type="string" placeholder={""} />
-                  </Form.Group>
-                </Col>
-                <Col>
-                  <Form.Group controlId="imageUrl">
-                    <Form.Label>Image URL</Form.Label>
-                    <Form.Control type="string" placeholder={""} />
-                  </Form.Group>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Form.Group controlId="content">
-                    <Form.Label>Content</Form.Label>
-                    <Form.Control type="string" placeholder={""} />
-                  </Form.Group>
-                </Col>
-                <Col>
-                  <Form.Group controlId="tags">
-                    <Form.Label>Tags</Form.Label>
-                    <Form.Control type="string" placeholder={""} />
-                  </Form.Group>
-                </Col>
-              </Row>
-            </for> */}
             <form onSubmit={this.handleSubmit}>
               <label htmlFor="title">Title:</label>
               <input

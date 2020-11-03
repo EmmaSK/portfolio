@@ -1,4 +1,5 @@
 import axios from "axios";
+import cloud from "../assets/cloudlight.png";
 
 const initialState = { entries: [] };
 
@@ -36,9 +37,7 @@ export const addNewEntry = (entry) => {
       const date = new Date();
       const { data } = await axios.post("/api/entries", {
         title: entry.title,
-        imageUrl:
-          entry.imageUrl ||
-          "https://vignette.wikia.nocookie.net/haikyuu/images/e/e5/Hinata_s1-e1-1.png/revision/latest/top-crop/width/300/height/300?cb=20200508104838",
+        imageUrl: entry.imageUrl,
         content: entry.content,
         tags: entry.tags || [],
         date: date,
