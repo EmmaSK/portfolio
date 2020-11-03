@@ -30,10 +30,17 @@ router.get("/:id", async (req, res, next) => {
 //post new entry
 router.post("/", async (req, res, next) => {
   try {
-    const { title, imageUrl, content, tags, date } = req.body;
-    res
-      .status(201)
-      .json(await Entry.create({ title, imageUrl, content, tags, date }));
+    const { title, imageUrl, content, tags } = req.body;
+    const newEntry = await Entry.create({
+      title,
+      imageUrl:
+        imageUrl ||
+        "https://vignette.wikia.nocookie.net/haikyuu/images/e/e5/Hinata_s1-e1-1.png/revision/latest/top-crop/width/300/height/300?cb=20200508104838",
+      content,
+      tags: tags || "No tags",
+      date: new Date(),
+    });
+    res.json(newEntry).status(201);
   } catch (err) {
     next(err);
   }
